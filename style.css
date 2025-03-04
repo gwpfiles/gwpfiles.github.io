@@ -1,0 +1,153 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Space between title and menu */
+    align-items: center; /* Align title and menu vertically at the center */
+    width: 100%; /* Adjust the width to suit your design */
+    height: 100%; /* Full height of the viewport */
+  gap: 20%;
+}
+
+/* Title Section Styles */
+.title {
+    display: flex;
+    flex-direction: column; /* Stack title items vertically */
+     /* Align items to the left */
+    justify-content: center; /* Vertically center the title content */
+    line-height: 1; /* Ensure consistent spacing between lines */
+    height: 100%; /* Take full height */
+    
+}
+
+.title-line {
+    display: flex; /* Align 'The' and 'GWP' on the same line */
+    align-items: center;
+}
+
+.the {
+    font-size: 5em;
+    font-family: "Rokkitt", serif;
+    font-weight: normal;
+}
+
+.gwp {
+    font-size: 10em;
+    font-family: "DM Sans", serif;
+    font-weight: bold;
+    margin: 0px; /* Remove space between GWP and Files */
+}
+
+.files {
+    font-size: 10em;
+    font-family: "Orbitron", serif;
+    font-weight: 600;
+    letter-spacing: 10px;
+}
+
+/* Menu Section Styles */
+.menu {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: center; /* Center buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    height: 100%; /* Take full height */
+    margin-top: 30px;
+}
+
+.button-59 {
+  margin-bottom: 20px;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: 3px solid #000;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: "Rokkitt", serif;
+  font-size: 20px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 20px 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-59:focus {
+  color: #171e29;
+}
+
+.button-59:hover {
+  border-color: #BA9B5D;
+  color: #BA9B5D;
+  fill: #BA9B5D;
+}
+
+.button-59:active {
+  border-color: #000;
+  color: #000;
+  fill: #BA9B5D;
+  background-color: #BA9B5D;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack title and menu vertically */
+        align-items: center; /* Center align everything */
+        justify-content: center;
+    }
+
+    .title {
+        align-items: center; /* Center the title */
+        text-align: center; /* Center the text */
+    }
+
+    .title-line {
+        flex-direction: column; /* Stack 'The' and 'GWP' vertically */
+        align-items: center;
+    }
+
+    .the, .gwp, .files {
+        font-size: 4em; /* Reduce font size for smaller screens */
+    }
+
+    .menu {
+        margin-top: 20px; /* Adjust margin for better spacing */
+    }
+
+    .button-59 {
+        min-width: 160px; /* Make the button wider */
+    }
+}
+
+@media (min-width: 900px) {
+  .button-59 {
+    min-width: 170px;
+  }
+}
